@@ -1,0 +1,314 @@
+/* Base styles (mobile-first) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+header {
+  background-color: #af2030;
+  padding: 15px 0;
+}
+.brand-logo {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  padding: 10px 15px;
+}
+
+#drawer {
+  transition: transform 0.3s ease-in-out;
+}
+
+#drawer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 20rem;
+}
+
+#drawer ul li {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #f9f9f9;
+  top: 16px;
+  left: 16px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 10px 15px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+nav {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+nav ul li {
+  margin-right: 30px;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #f9f9f9;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+nav ul li a:hover {
+  color: #4a555e;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.hero picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main {
+  padding: 20px 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.restaurant-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 15px;
+}
+
+footer {
+  background-color: #bf1722;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 10px;
+}
+
+footer #footerTools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .hero {
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-image {
+    position: static;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  nav {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  #restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  #drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #1a1b22;
+    padding-top: 60px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  #drawer.open {
+    transform: translateX(250px);
+  }
+
+  #drawer ul {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  #drawer ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #drawer ul li a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 60vh; /* Adjust this value as needed */
+    max-width: 100%; /* Allow full width */
+  }
+
+  .hero picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Center the image */
+  }
+
+  .hero::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+}
+.like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bf1722;
+}
+
+.liked {
+  color: #f00;
+}

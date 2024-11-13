@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunger Bar - Restaurant Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link">Skip to content</a>
+
+    <header>
+      <div class="container">
+        <h1 class="brand-logo">Hunger Bar</h1>
+        <button
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="drawer" aria-hidden="true">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
+            <li>
+              <a
+                href="https://github.com/Itadorizz"
+                target="_blank"
+                rel="noopener"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <picture>
+        <img
+          src="/images/heros/hero-image_2.jpg"
+          alt="Hero image"
+          class="hero-image"
+        />
+      </picture>
+    </div>
+
+    <main id="mainContent">
+      <section class="content">
+        <h2>Explore Restaurants</h2>
+        <div id="restaurant-list" class="restaurant-list"></div>
+        <div id="likeButtonContainer"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Hunger Bar by Rizz - Restaurant Catalog.</p>
+    </footer>
+  </body>
+</html>
