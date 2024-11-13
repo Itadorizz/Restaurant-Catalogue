@@ -1,8 +1,8 @@
 /* eslint-disable linebreak-style */
-import Home from '../views/pages/home';
-import Detail from '../views/pages/detail';
-import Favorite from '../views/pages/favorite';
-import LikeButtonInitiator from '../utils/like-button-initiator';
+import Home from '../views/pages/home.js';
+import Detail from '../views/pages/detail.js';
+import Favorite from '../views/pages/favorite.js';
+import LikeButtonInitiator from '../utils/like-button-initiator.js';
 
 const routes = {
   '/': Home,

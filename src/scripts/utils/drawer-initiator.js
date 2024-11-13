@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 const DrawerInitiator = {
-  init({ hamburger, drawer }) {
+  init({ button, drawer }) {
     document.addEventListener('click', (event) => {
       event.preventDefault();
       this._toggleDrawer(event, drawer);
@@ -8,7 +8,7 @@ const DrawerInitiator = {
 
     // Gunakan `document` untuk mendeteksi klik di luar drawer, termasuk `mainContent`
     document.addEventListener('click', (event) => {
-      this._closeDrawer(event, drawer, hamburger);
+      this._closeDrawer(event, drawer, button);
     });
 
     // Pastikan drawer tidak tertutup saat di dalam drawer atau menu
@@ -20,8 +20,8 @@ const DrawerInitiator = {
     drawer.classList.toggle('open');
   },
 
-  _closeDrawer(event, drawer, hamburger) {
-    if (!drawer.contains(event.target) && event.target !== hamburger) {
+  _closeDrawer(event, drawer, button) {
+    if (!drawer.contains(event.target) && event.target !== button) {
       drawer.classList.remove('open');
     }
   },

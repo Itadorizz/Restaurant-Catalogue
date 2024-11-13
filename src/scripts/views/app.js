@@ -1,13 +1,13 @@
 /* eslint-disable linebreak-style */
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
-import routes from '../routes/routes';
+import routes from '../routes/routes.js';
 
 
-console.log('APP KE LOAD BOSS');
+
 class App {
-  constructor({ hamburger, drawer, mainContent }) {
-    this._hamburger = hamburger;
+  constructor({ button, drawer, mainContent }) {
+    this._button = button;
     this._drawer = drawer;
     this._content = mainContent;
 
@@ -16,7 +16,7 @@ class App {
 
   _initialAppShell() {
     DrawerInitiator.init({
-      button: this._hamburger,
+      button: this._button,
       drawer: this._drawer,
       content: this._content,
     });

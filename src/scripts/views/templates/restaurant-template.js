@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-card">
-    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" 
+    <img src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" 
          alt="${restaurant.name}" 
          class="restaurant-image">
     <div class="restaurant-info">
@@ -18,7 +18,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant-detail">
     <h2>${restaurant.name}</h2>
-    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" 
+    <img src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" 
          alt="${restaurant.name}" 
          class="restaurant-detail-image">
     
