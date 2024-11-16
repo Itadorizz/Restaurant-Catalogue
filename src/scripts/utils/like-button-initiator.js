@@ -1,6 +1,8 @@
-/* eslint-disable linebreak-style */
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
-import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/restaurant-template';
+import {
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+} from '../views/templates/restaurant-template';
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, restaurant }) {
@@ -47,3 +49,4 @@ const LikeButtonInitiator = {
 };
 
 export default LikeButtonInitiator;
+

@@ -1,15 +1,12 @@
-/* eslint-disable linebreak-style */
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
-import routes from '../routes/routes.js';
-
-
+import routes from '../routes/routes';
 
 class App {
-  constructor({ button, drawer, mainContent }) {
+  constructor({ button, drawer, content }) {
     this._button = button;
     this._drawer = drawer;
-    this._content = mainContent;
+    this._content = content;
 
     this._initialAppShell();
   }
@@ -18,7 +15,7 @@ class App {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
-      content: this._content,
+      content: this._mainContent,
     });
   }
 
@@ -27,7 +24,16 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+    const skipLink = document.querySelector('.skip-link');
+    const mainContent = document.getElementById('mainContent');
+
+    skipLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+      skipLink.blur();
+    });
   }
 }
 
 export default App;
+

@@ -1,8 +1,6 @@
 import RestaurantSource from '../../data/restaurant-source';
 import { createRestaurantItemTemplate } from '../templates/restaurant-template';
 
-console.log('HOME KE LOAD BOSS');
-
 const Home = {
   async render() {
     return `

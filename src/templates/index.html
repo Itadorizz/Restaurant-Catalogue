@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hunger Bar - Restaurant Catalog</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="manifest" href="./app.webmanifest" />
   </head>
   <body>
     <a href="#mainContent" class="skip-link">Skip to content</a>
@@ -46,10 +51,17 @@
       </picture>
     </div>
 
-    <main id="mainContent"></main>
+    <main tabindex="0" id="mainContent">
+      <section class="content">
+        <h2>Explore Restaurants</h2>
+        <div id="restaurant-list" class="restaurant-list"></div>
+        <div id="likeButtonContainer"></div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2024 Hunger Bar by Rizz - Restaurant Catalog.</p>
     </footer>
   </body>
 </html>
+

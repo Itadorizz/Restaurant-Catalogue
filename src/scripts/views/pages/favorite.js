@@ -1,8 +1,6 @@
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createRestaurantItemTemplate } from '../templates/restaurant-template';
 
-console.log('FAV KE LOAD BOSS');
-
 const Favorite = {
   async render() {
     return `
